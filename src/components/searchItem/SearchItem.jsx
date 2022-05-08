@@ -5,9 +5,8 @@ import { useNavigate } from "react-router-dom";
 
 const SearchItem = () => {
   const navigate = useNavigate();
-  const handleSearch = () => {
-    navigate("/hotels/123");
-  };
+  const goTo = () => navigate("/hotels/123", "replace: true");
+
   return (
     <div className="searchItem">
       <img
@@ -39,7 +38,7 @@ const SearchItem = () => {
         <div className="siDetailTexts">
           <span className="siPrice">$112</span>
           <span className="siTaxOp">Includes taxes and fees</span>
-          <button className="siCheckButton" onClick={() => {}}>
+          <button className="siCheckButton" onClick={goTo}>
             See availability
           </button>
         </div>

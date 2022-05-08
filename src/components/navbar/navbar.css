@@ -4,6 +4,9 @@
 	display: flex;
 	justify-content: center;
 }
+.navContainer>span {
+	cursor: pointer;
+}
 .navContainer {
 	width: 100%;
 	max-width: 1024px;
