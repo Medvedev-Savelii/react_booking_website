@@ -1,6 +1,13 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./searchItem.css";
+import { useNavigate } from "react-router-dom";
+
 const SearchItem = () => {
+  const navigate = useNavigate();
+  const handleSearch = () => {
+    navigate("/hotels/123");
+  };
   return (
     <div className="searchItem">
       <img
@@ -24,7 +31,7 @@ const SearchItem = () => {
           You can cancel later, so lock in this great price today!
         </span>
       </div>
-      <div className="siDetalis">
+      <div className="siDetails">
         <div className="siRating">
           <span>Excellent</span>
           <button>8.9</button>
@@ -32,7 +39,9 @@ const SearchItem = () => {
         <div className="siDetailTexts">
           <span className="siPrice">$112</span>
           <span className="siTaxOp">Includes taxes and fees</span>
-          <button className="siCheckButton">See availability</button>
+          <button className="siCheckButton" onClick={() => {}}>
+            See availability
+          </button>
         </div>
       </div>
     </div>
